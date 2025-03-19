@@ -1,38 +1,92 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mini Arcade</title>
-     <!-- Agregar Bootstrap para los estilos -->
-     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-    </head>
-
-    <body class="bg-image" style="background-image: url('Agregar Imagen Luego');">
-    
-        <!-- Encabezado -->
-        <header class="bg-primary text-white py-4 text-center">
-            <h1>Bienvenido a Mini Arcade</h1>
-        </header>
-    
-        <!-- Navegación -->
-        <div class="container mt-4">
-            <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link" href="ahorcado.html">Ahorcado</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="trivia.html">Trivia</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="tic-tac-toe.html">Tic Tac Toe</a>
-                    </li>
-                </ul>
-            </nav>
-        </div>
+    <!-- Agregar Bootstrap para los estilos -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-    
+
+<body style="background-image: url('https://img.freepik.com/vector-gratis/photocall-juegos-neon-dibujado-mano_23-2149860761.jpg?t=st=1742263129~exp=1742266729~hmac=28e76c707df34eb8c0b70da39ef06bd02cf546cf549f022f3974525dc1e21cbc&w=1380'); background-size: cover; background-position: center; background-attachment: fixed;"> 
+
+ <!-- Encabezado con Bootstrap -->
+ <header class="bg-primary text-white py-4 text-center">
+    <h1>Bienvenido a Mini Arcade</h1>
+</header>
+
+<!-- Navegación con Bootstrap -->
+<div class="container mt-4">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="#ahorcado-card">Ahorcado</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#trivia-card">Trivia</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#tic-tac-toe-card">Tic Tac Toe</a>
+            </li>
+        </ul>
+    </nav>
+</div>
+
+
+<!-- Contenedor para las cards con flexbox para alinearlas verticalmente -->
+<div class="container d-flex justify-content-center align-items-center" style="min-height: 80vh;">
+    <div class="row justify-content-center d-flex flex-column align-items-center">
+       
+        <!-- Card 1: Ahorcado -->
+        <div class="col-12 mb-4 d-flex" id="ahorcado-card">
+            <div class="card w-100 h-100 d-flex flex-column">
+                <img src="https://www.planinfantil.es/wp-content/uploads/2020/03/el-ahorcado.jpg" class="card-img-top" alt="Ahorcado" style="object-fit: cover; height: 600px;">
+                <div class="card-body text-center">
+                    <h3 class="card-title" id="ahorcado-title"><strong>Ahorcado</strong></h3>
+                    <a href="ahorcado.html" class="btn btn-primary btn-jugar">Jugar</a>
+                    <p><strong>Adivina las palabras antes de que el hombre se quede sin vida. ¡Desafía a tus amigos y demuestra quién es el rey de las adivinanzas!</strong></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 2: Trivia -->
+        <div class="col-12 mb-4 d-flex" id="trivia-card">
+            <div class="card w-100 h-100 d-flex flex-column">
+                <img src="https://www.shutterstock.com/shutterstock/photos/1630412920/display_1500/stock-vector-trivia-time-poster-design-template-game-banner-vector-illustration-1630412920.jpg" class="card-img-top" alt="Trivia" style="object-fit: cover; height: 400px;">
+                <div class="card-body text-center">
+                    <h3 class="card-title"><strong>Trivia</strong></h3>
+                    <a href="trivia.html" class="btn btn-primary btn-jugar">Jugar</a>
+                    <p><strong>¿Eres un experto en datos curiosos? ¡Demuestra tus conocimientos con Trivia!</strong></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 3: Tic Tac Toe -->
+        <div class="col-12 mb-4 d-flex" id="tic-tac-toe-card">
+            <div class="card w-100 h-100 d-flex flex-column">
+                <img src="https://play-lh.googleusercontent.com/0sP4GATwfNq0LTrJF5ijzSQQIsEUY9hoO3X4BwWxUsxg-z4PhHciDyITQJSOKo9GAw=w5120-h2880-rw" class="card-img-top" alt="Tic Tac Toe" style="object-fit: cover; height: 325px;">
+                <div class="card-body text-center">
+                    <h3 class="card-title"><strong>Tic Tac Toe</strong></h3>
+                    <a href="tic-tac-toe.html" class="btn btn-primary btn-jugar">Jugar</a>
+                    <p><strong>Coloca tus X o O en el tablero y vence a tu oponente ¡antes de que él lo haga!</strong></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Agregar los scripts de Bootstrap -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+
+<!-- Incluir el archivo script.js -->
+<script src="script.js"></script>
+
+<!-- Pie de página con Bootstrap -->
+<footer class="bg-primary text-white py-2 text-center">
+    <p><strong>Copyright © 2025 Mini Arcade. Reservados todos los derechos.</strong></p>
+</footer>
+
 </body>
 </html>

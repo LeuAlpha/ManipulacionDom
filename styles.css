@@ -1,0 +1,23 @@
+/* Estilo para el fondo de la página */
+body {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+
+@media (max-width: 768px) {
+    /* Ajustes para pantallas más pequeñas */
+    .card {
+        width: 100%;
+    }
+
+    .card-img-top {
+        height: 200px;
+    }
+
+    .container {
+        margin-top: 15px;
+    }
+}
+
